@@ -6,10 +6,23 @@
     width: 60%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     margin-top: 3rem;
+    flex-direction: column;
 }
 
 .img {
     width: 40%;
     height: 40%;
     object-fit: contain;
+}
+
+.btn{
+    margin-top: 2rem;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: #FFFFFF;
+    font-size: larger;
+    font-weight: 500;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    padding: 10px 20px;
 }
