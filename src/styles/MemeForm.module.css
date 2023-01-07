@@ -17,7 +17,8 @@
     border-radius: 5px;
     height: 35px;
     box-sizing: border-box;
-    width: 100%;
+    width: 60%;
+    margin: .5rem;
 }
 
 input {
@@ -32,6 +33,11 @@ input {
     font-size: 12px;
     line-height: 14px;
     color: #0D0D0D;
+}
+
+.quantityInput {
+    width: 30%;
+    margin: .5rem;
 }
 
 .btn {

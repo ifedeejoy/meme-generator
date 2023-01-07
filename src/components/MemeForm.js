@@ -5,11 +5,12 @@ import MemeDisplay from './MemeDisplay';
 
 const MemeForm = () => {
     const [userPrompt, setUserPrompt] = useState('')
+    const [imageQuantity, setImageQuantity] = useState('')
     const [memeUrl, setMemeUrl] = useState('')
     const [loading, setLoading] = useState(false)
 
     const generateMeme = (userPrompt) => {
-        memeMaker(userPrompt).then((url) => {
+        memeMaker(userPrompt, imageQuantity).then((url) => {
             setMemeUrl(url)
             setLoading(false);
         })
@@ -27,6 +28,7 @@ const MemeForm = () => {
             <form onSubmit={handleSubmit} className={Styles.form}>
                 <div className={Styles.inputGroup}>
                     <input className={Styles.inputField} value={userPrompt} onChange={(event) => setUserPrompt(event.target.value)} type="text" placeholder="Enter your prompt" />
+                    <input type='number' className={`${Styles.inputField} ${Styles.quantityInput}`} value={imageQuantity} onChange={(event) => setImageQuantity(event.target.value)} placeholder="How many images do you want?" />
                 </div>
 
                 <button type='submit' className={Styles.btn}>Generate Meme</button>
